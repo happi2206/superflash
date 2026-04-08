@@ -1,0 +1,38 @@
+[
+  {
+    "question": "Why does React batch state updates inside event handlers but not in setTimeout by default?",
+    "answer": "React batches updates in synthetic events to reduce unnecessary renders. Updates inside setTimeout run outside React's event system, so they are processed immediately unless explicitly batched.",
+    "category": "React",
+    "difficulty": "hard"
+  },
+  {
+    "question": "When would you choose useLayoutEffect over useEffect?",
+    "answer": "Use useLayoutEffect when you need to read layout or perform DOM measurements synchronously before the browser paints.",
+    "category": "React",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How do you cancel an in-flight fetch in React to avoid setting state on unmounted components?",
+    "answer": "Create an AbortController, pass controller.signal to fetch, and call controller.abort() in the cleanup function.",
+    "category": "APIs",
+    "difficulty": "medium"
+  },
+  {
+    "question": "SQL vs NoSQL: when do you prefer each for an analytics dashboard?",
+    "answer": "SQL is preferred for structured data with relationships and complex queries. NoSQL is better for high-volume, flexible schema data such as event logs.",
+    "category": "Databases",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does an index speed up queries and when can it backfire?",
+    "answer": "Indexes speed up queries by allowing faster lookups instead of full scans. They can backfire by increasing write costs and storage usage.",
+    "category": "Databases",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How would you debounce a search-as-you-type input that calls a REST API?",
+    "answer": "Use useEffect with a setTimeout to delay the API call until the user stops typing, and clear the timeout on each keystroke.",
+    "category": "APIs",
+    "difficulty": "easy"
+  }
+]
