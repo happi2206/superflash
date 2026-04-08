@@ -1,0 +1,29 @@
+const mongoose = require('mongoose');
+
+const cardSchema = new mongoose.Schema(
+  {
+    question: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    answer: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    category: {
+      type: String,
+      default: 'React',
+      trim: true,
+    },
+    difficulty: {
+      type: String,
+      default: 'medium',
+      trim: true,
+    },
+  },
+  { timestamps: true }
+);
+
+module.exports = mongoose.model('Card', cardSchema);
