@@ -1,54 +1,61 @@
-# SuperFlash – Web Development Flashcard App
+# SuperFlash – Web Development Flashcard Learning App
 
-## Overview
+## 1. Project Overview
 
-SuperFlash is a full-stack flashcard learning application designed to help users study and retain web development concepts such as React, APIs, and databases. The app provides a focused, interactive study experience through timed sessions, smooth transitions, and a clean modern interface.
-
-This application behaves as a single-page application (SPA), dynamically updating content without page reloads.
+SuperFlash is a full-stack flashcard learning application designed to help users study and retain key web development concepts such as React, APIs, and databases. The app provides a focused and interactive study experience through timed sessions, categorized flashcards, and a clean, distraction-free interface.
 
 ---
 
-## Problem
+## 2. Problem Statement
 
-Learning technical concepts can be repetitive and inefficient without structured tools. Many learners struggle to stay focused or retain information when studying large amounts of material.
+Learning technical concepts can be repetitive and inefficient without structured tools. Many learners struggle to stay focused or retain information when studying large volumes of material.
 
-SuperFlash solves this by providing an intuitive flashcard system with timed study sessions, categorized content, and a distraction-free interface that encourages active recall.
-
----
-
-## Features
-
-* Create, edit, and delete flashcards (Full CRUD functionality)
-* Study mode with one-card-at-a-time focus
-* Timer per card with visual countdown
-* Smooth card transitions and animations
-* Category filtering (React, APIs, Databases)
-* Difficulty tagging (easy, medium, hard)
-* Session-based learning flow
-* Responsive design for mobile and desktop
-* Clean dark-themed UI for better readability
+SuperFlash addresses this problem by providing an interactive flashcard system that encourages active recall, supports structured learning through categories and difficulty levels, and improves focus using timed study sessions.
 
 ---
 
-## Tech Stack
+## 3. Technical Stack
 
 **Frontend**
 
-* React
-* Tailwind CSS
+* React (Single Page Application)
+* Tailwind CSS (styling and layout)
 
 **Backend**
 
 * Node.js
-* Express.js
+* Express.js (REST API)
 
 **Database**
 
 * MongoDB (MongoDB Atlas)
 
+**Routing & Architecture**
+
+* SPA architecture using React component-based rendering
+* RESTful API communication between frontend and backend
+
+**Deployment**
+
+* Designed for local development and can be deployed using platforms such as Vercel (frontend) and Render (backend)
+
 ---
 
-## Folder Structure
+## 4. Features
+
+* Full CRUD functionality (Create, Read, Update, Delete flashcards)
+* Study Mode with one-card-at-a-time learning
+* Timer per card with visual countdown
+* Category filtering (React, APIs, Databases)
+* Difficulty tagging (easy, medium, hard)
+* Smooth transitions and card animations
+* Responsive mobile-friendly design
+* Clean dark-mode UI
+* Session-based learning flow with restart functionality
+
+---
+
+## 5. Folder Structure
 
 ```text
 superflash/
@@ -61,32 +68,23 @@ superflash/
 
 ---
 
-## How to Run Locally
+## 6. How to Run the Project
 
-### 1. Clone the repository
-
-```bash
-git clone <your-repo-link>
-cd superflash
-```
-
----
-
-### 2. Backend Setup
+### Backend Setup
 
 ```bash
 cd server
 npm install
 ```
 
-Create a `.env` file inside `/server`:
+Create a `.env` file:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
-PORT=5050
+PORT=5000
 ```
 
-Start the backend server:
+Run the server:
 
 ```bash
 node server.js
@@ -94,7 +92,7 @@ node server.js
 
 ---
 
-### 3. Frontend Setup
+### Frontend Setup
 
 ```bash
 cd client
@@ -102,56 +100,49 @@ npm install
 npm start
 ```
 
-The application will open in your browser.
-
 ---
 
-## 🔐 Database Setup
+## 7. Database Setup
 
-To run this project, you will need a MongoDB database.
+To run this project, you need a MongoDB database.
 
-### Option 1: MongoDB Atlas (Recommended)
+### Option 1: MongoDB Atlas
 
 1. Create a free cluster at https://www.mongodb.com/atlas
-2. Create a database user (username and password)
-3. Go to Network Access and allow:
+2. Create a database user
+3. Allow access from:
 
 ```
 0.0.0.0/0
 ```
 
-4. Copy your connection string
-5. Paste it into your `.env` file as `MONGO_URI`
+4. Add your connection string to `.env`
 
 ---
 
 ### Option 2: Use Provided Dataset
 
-A sample dataset is included in:
+A sample dataset is included:
 
 ```
 /database/cards.json
 ```
 
-You can import this into your MongoDB database to quickly populate the app.
+This can be imported into MongoDB to populate the application.
 
 ---
 
-## Challenges Faced
+## 8. Challenges and Solutions
 
-* Designing a smooth and intuitive study flow without unnecessary steps
-* Managing state transitions between flashcards and animations
-* Implementing a timer that integrates naturally into the user experience
-* Ensuring consistent responsiveness across different screen sizes
-* Connecting the frontend and backend cleanly using REST APIs
+One of the main challenges was designing a smooth and intuitive study flow without introducing unnecessary steps or complexity. Managing state transitions between flashcards while maintaining a responsive UI required careful handling of React state and component updates. Implementing the timer feature in a way that felt natural and not disruptive to the user experience was also challenging. Additionally, ensuring consistent responsiveness across different screen sizes required multiple layout refinements. Finally, integrating the frontend with the backend API while maintaining clean and readable code structure required thoughtful separation of concerns.
 
 ---
 
-## Notes
+## 9. Notes
 
-* This application is designed to behave as a seamless SPA with dynamic updates.
-* Backend integration ensures all flashcard data is persisted in a database.
-* The UI prioritizes clarity, responsiveness, and smooth interaction.
+* The application behaves as a Single Page Application (SPA)
+* All flashcard data is stored and managed through a backend database
+* The UI is designed to prioritize clarity, responsiveness, and usability
 
 ---
 
